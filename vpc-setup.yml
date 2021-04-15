@@ -69,7 +69,7 @@
         cidr: "{{Privsub1Cidr}}"
         resource_tags:
           Name: vprofile_privsub1
-        register: privsub1_out
+      register: privsub1_out
 
 
     - name: create private subnet 2 in zone2
@@ -81,7 +81,7 @@
         cidr: "{{Privsub2Cidr}}"
         resource_tags:
           Name: vprofile_privsub2
-        register: privsub2_out
+      register: privsub2_out
 
 
     - name: create private subnet 3 in zone3

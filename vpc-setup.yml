@@ -33,6 +33,8 @@
           Name: vprofile_pubsub1
       register: pubsub1_out
 
+    - debug:
+        var: pubsu1_out
 
     - name: create public subnet 2 in zone2
       ec2_vpc_subnet:
@@ -57,7 +59,7 @@
         map_public: yes
         resource_tags:
           Name: vprofile_pubsub3
-      register: privub3_out
+      register: pubsub3_out
 
 
     - name: create private subnet 1 in zone1
@@ -104,6 +106,22 @@
         resource_tags:
           Name: vprofile_IGW
       register: igw_out
+
+
+    -name: route table for public subnet
+     ec2_vpc_route_table:
+       vpc_id: "{{vpcout.vpc.id}}"
+       region: "{{region}}"
+       tags:
+         Name: VProfile-PubRT
+       subnets:
+         - "{{pubsub1_out.subnet.id}}"
+         - "{{pubsub2_out.subnet.id}}"
+         - "{{pubsub3_out.subnet.id}}"
+       routes:
+         - dest: 0.0.0.0/0
+
+
 
 
 

@@ -6,11 +6,11 @@ vpcCidr: '172.20.0.0/16'
 
 #subnets Range
 Pubsub1Cidr: 172.20.1.0/24
-Pubsub1Cidr: 172.20.2.0/24
-Pubsub1Cidr: 172.20.3.0/24
+Pubsub2Cidr: 172.20.2.0/24
+Pubsub3Cidr: 172.20.3.0/24
 Privsub1Cidr: 172.20.4.0/24
-Privsub1Cidr: 172.20.5.0/24
-Privsub1Cidr: 172.20.6.0/24
+Privsub2Cidr: 172.20.5.0/24
+Privsub3Cidr: 172.20.6.0/24
 
 #Subnet Range
 region: "us-east-2"

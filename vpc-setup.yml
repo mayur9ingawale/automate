@@ -7,7 +7,7 @@
 
     - name: create vprofile vpc
       ec2_vpc_net:
-        name: "{{Vprofile-vpc}}"
+        name: "{{vpc_name}}"
         cidr_block: "{{vpcCidr}}"
         region: "{{region}}"
         dns_support: yes

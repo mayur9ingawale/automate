@@ -95,6 +95,7 @@
           Name: vprofile_privsub3
       register: privsub3_out
 
+
     - name: Internet Gateway setup
       ec2_vpc_igw:
         vpc_id: "{{vpcout.vpc.id}}"

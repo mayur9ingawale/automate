@@ -33,8 +33,6 @@
           Name: vprofile_pubsub1
       register: pubsub1_out
 
-    - debug:
-        var: pubsu1_out
 
     - name: create public subnet 2 in zone2
       ec2_vpc_subnet:
@@ -121,7 +119,7 @@
         routes:
           - dest: 0.0.0.0/0
             gateway_id: "{{igw_out.gateway.id}}"
-      register: pubRT_OUT
+      register: pubRT_out
 
 
 

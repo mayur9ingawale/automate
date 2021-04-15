@@ -108,13 +108,13 @@
       register: igw_out
 
 
-    -name: route table for public subnet
-     ec2_vpc_route_table:
-       vpc_id: "{{vpcout.vpc.id}}"
-       region: "{{region}}"
-       tags:
-         Name: VProfile-PubRT
-       subnets:
+    - name: route table for public subnet
+      ec2_vpc_route_table:
+        vpc_id: "{{vpcout.vpc.id}}"
+        region: "{{region}}"
+        tags:
+          Name: VProfile-PubRT
+        subnets:
          - "{{pubsub1_out.subnet.id}}"
          - "{{pubsub2_out.subnet.id}}"
          - "{{pubsub3_out.subnet.id}}"

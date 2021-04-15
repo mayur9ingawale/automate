@@ -23,13 +23,13 @@
        ec2_vpc_subnets:
          vpc_id: "{{vpcout.vpc.id}}"
          region: "{{region}}"
-          az: "{{zone1}}"
-          state: "{{state}}"
-          cidr: "{{Pubsub1Cidr}}"
-          map_public: yes
-          resource_tags:
+         az: "{{zone1}}"
+         state: "{{state}}"
+         cidr: "{{Pubsub1Cidr}}"
+         map_public: yes
+         resource_tags:
             Name: vprofile_pubsub1
-            register: pubsub1_out
+       register: pubsub1_out
 
 
 

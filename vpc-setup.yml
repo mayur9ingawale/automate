@@ -131,8 +131,8 @@
         if_exist_do_not_create: true
       register: NATGW_out
 
-    - debug: yes
-      var: NATGW_out
+    - debug:
+        var: NATGW_out
 
     - name: Set up private subnet route table
       ec2_vpc_route_table:
@@ -147,7 +147,7 @@
         routes:
           - dest: 0.0.0.0/0
             gateway_id: "{{NATGW_out.gateway_id}}"
-      register: pubRT_out
+      register: privRT_out
 
 
 

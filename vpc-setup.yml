@@ -134,6 +134,7 @@
     - debug:
         var: NATGW_out
 
+
     - name: Set up Private subnet route table
       ec2_vpc_route_table:
         vpc_id: "{{vpcout.vpc.id}}"
@@ -150,9 +151,10 @@
       register: privRT_out
 
 
-      - debug:
-          var: "{{item}}"
-        loop:
+    - debug:
+        var: "{{item}}"
+
+      - loop:
           - vpcout.vpc.id
           - pubsub1_out.subnet.id
           - pubsub2_out.subnet.id

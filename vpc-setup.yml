@@ -179,7 +179,7 @@
         igwid: "{{ igw_out.gateway_id }}"
         pubRTid: "{{ pubRT_out.route_table.id }}"
         NATGWid: "{{ NATGW_out.nat_gateway_id }}"
- les file        privRTid: "{{ privRT_out.route_table.id }}"
+        privRTid: "{{ privRT_out.route_table.id }}"
         cacheable: yes
 
 

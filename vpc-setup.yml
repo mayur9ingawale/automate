@@ -132,7 +132,7 @@
       register: NATGW_out
 
     - debug: yes
-        var: NATGW_out
+      var: NATGW_out
 
     - name: Set up private subnet route table
       ec2_vpc_route_table:
